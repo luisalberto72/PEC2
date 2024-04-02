@@ -67,7 +67,7 @@ function animalMap(options = {}) {
 function animalPopularity(rating) {
   const popularityGroups = {};
 
-  // Group animals by popularity
+  // Agrupar animals por popularity
   animals.forEach(animal => {
     const popularity = animal.popularity;
     if (!popularityGroups[popularity]) {
@@ -76,12 +76,12 @@ function animalPopularity(rating) {
     popularityGroups[popularity].push(animal.name);
   });
 
-  // Sort the popularity groups by numerical value in ascending order
+  // Odenar la  popularity agrupadas por valor numérico en orden ascendente
   const sortedGroups = Object.fromEntries(
     Object.entries(popularityGroups).sort((a, b) => parseInt(a[0]) - parseInt(b[0]))
   );
 
-  // If a rating is provided, return animals with that rating
+  // Si un rating es proveido, regreso animals con ese rating
   if (rating !== undefined) {
     return sortedGroups[rating] || [];
   }

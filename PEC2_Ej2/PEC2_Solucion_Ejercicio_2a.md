@@ -26,7 +26,9 @@ const obj = {
   }
 };
 
+
 obj.ejemploFunction(); // Imprime: "Objeto"
+
 obj.arrowFunction();   // Imprime: undefined
 
 Cuando la función flecha arrowFunction, se llama en el mismo contexto, this dentro de la función de flecha hace referencia al contexto global (o al contexto que rodea al objeto obj, si este código está dentro de una función), y en este caso, name no está definido en el contexto global, por lo que imprime undefined.

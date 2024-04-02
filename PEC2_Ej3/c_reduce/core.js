@@ -3,10 +3,7 @@ function sum(array) {
 }
 
 function productAll(array) {
-  function multiplyArray(arr) {
-    return arr.reduce((acc, curr) => acc * curr, 1);
-  }
-
+  
   return array.reduce((acc, curr) => {
     if (Array.isArray(curr)) {
       return acc * productAll(curr);
